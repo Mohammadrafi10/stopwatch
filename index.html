@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        color: white;
+      }
+
+      .timer {
+        display: flex;
+        gap: 15px;
+        font-size: 48px;
+        font-weight: bold;
+      }
+
+      .timer span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      .buttons button {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        background-color: #ff5722;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.1s;
+      }
+
+      .buttons button:hover {
+        background-color: #e64a19;
+      }
+
+      .buttons button:active {
+        transform: scale(0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="timer">
+      <span id="hour">00</span>:
+      <span id="min">00</span>:
+      <span id="sec">00</span>
+    </div>
+    <div class="buttons">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn">Stop</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
